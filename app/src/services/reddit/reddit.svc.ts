@@ -42,6 +42,25 @@ export default class RedditService extends BaseService {
                     dataChil.author = element.data.author;
                     dataChil.id = element.data.id;
                     dataChil.url = element.data.url;
+                    dataChil.domain = element.data.domain;
+                    dataChil.banned_by = element.data.banned_by;
+                    dataChil.subreddit = element.data.subreddit;
+                    dataChil.selftext_html = element.data.selftext_html;
+                    dataChil.selftext = element.data.selftext;
+                    dataChil.likes = element.data.likes;
+                    dataChil.suggested_sort = element.data.suggested_sort;
+                    dataChil.secure_media = element.data.secure_media;
+                    dataChil.link_flair_text = element.data.link_flair_text;
+                    dataChil.from_kind = element.data.from_kind;
+                    dataChil.gilded = element.data.gilded;
+                    dataChil.archived = element.data.archived;
+                    dataChil.clicked = element.data.clicked;
+                    dataChil.report_reasons = element.data.report_reasons;
+                    dataChil.media = element.data.media;
+                    dataChil.score = element.data.score;
+                    dataChil.approved_by = element.data.approved_by;
+                    dataChil.over_18 = element.data.over_18;
+                    dataChil.hidden = element.data.hidden;
 
                 }
             });
