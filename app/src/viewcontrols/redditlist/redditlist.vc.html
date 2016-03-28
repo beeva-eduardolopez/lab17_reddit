@@ -1,1 +1,12 @@
-<h1>Hello World!</h1>
+<h1>Reddit</h1>
+<!--<plat-button class="button-primary button-jumbo" plat-tap="goToCompose()">Compose</plat-button>-->
+<!--<p>Alternatively, <plat-link plat-options="{ view: composeView }">click here</plat-link> to compose a new post.</p>-->
+<plat-foreach class="reddit-list" plat-context="reddits">
+    <div class="reddit">
+        <h1>{{title}}</h1><!--success.data.children[0].data.title-->
+        <h3>{{author}}</h3><!--success.data.children[0].data.author-->
+        <h5>{{id}}</h5><!--success.data.children[0].data.id-->
+         <h5>{{url}}</h5><!--success.data.children[0].data.url-->
+        <!--<plat-button class="button-secondary" plat-tap="readMore(id)">Read more...</plat-button>-->
+    </div>
+</plat-foreach>
