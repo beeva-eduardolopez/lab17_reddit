@@ -1,16 +1,22 @@
-<h1>Reddit</h1>
-<!--<plat-button class="button-primary button-jumbo" plat-tap="goToCompose()">Compose</plat-button>-->
-<!--<p>Alternatively, <plat-link plat-options="{ view: composeView }">click here</plat-link> to compose a new post.</p>-->
-<plat-foreach class="reddit-list" plat-context="reddits">
-    <div class="reddit">
-        <h1>{{title}}</h1>
-        <!--success.data.children[0].data.title-->
-        <h3>{{author}}</h3>
-        <!--success.data.children[0].data.author-->
-        <h5>{{id}}</h5>
-        <!--success.data.children[0].data.id-->
-        <h5>{{url}}</h5>
-        <!--success.data.children[0].data.url-->
-        <plat-button class="button-secondary" plat-tap="viewDetails(id)">View Details</plat-button>
+
+<header>
+    <div id="block">
+        <div style="padding: 10px;">
+            <h2>Reddit DepotUI Platy</h2> by <span class="author">Eduardo Lopez Anta</span></span>
+        </div>
     </div>
-</plat-foreach>
+</header>
+<div class="center">
+    <ul plat-control="plat-foreach" plat-context="reddits" class="reddit-list">
+        <li>
+            <div class="reddit" style="padding: 10px;">
+                <div><span class="list-post">Id: </span> {{title}}</div>
+                <div><span class="list-post">Title: </span> {{author}}</div>
+                <div><span class="list-post">Author: </span> {{id}}</div>
+                <div><span class="list-post">Content: </span> {{url}}</div>
+                <br>
+                <plat-button class="button-danger button-small" plat-tap="viewDetails(id)">View Detail</plat-button>
+            </div>
+        </li>
+    </ul>
+</div>

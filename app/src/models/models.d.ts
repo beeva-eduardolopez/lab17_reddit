@@ -1,6 +1,5 @@
 declare module models {
 
-
     // success.data.children[0].data.id
     interface IRedditPost {
         data: IData;
@@ -39,12 +38,31 @@ declare module models {
         approved_by?: string,
         over_18?: boolean,
         hidden?: boolean,
-
-
-
-
+        num_comments?: number,
+        thumbnail?: string,
+        subreddit_id?: string,
+        hide_score?: boolean,
+        edited?: boolean,
+        link_flair_css_class?: string,
+        author_flair_css_class?: string,
+        downs?: number,
+        saved?: boolean,
+        removal_reason?: string,
+        post_hint?: string,
+        stickied?: boolean,
+        from?: string,
+        is_self?: boolean,
+        from_id?: string,
+        permalink?: string,
+        locked?: boolean,
+        created?: number,
+        author_flair_text?: string,
+        quarantine?: boolean,
+        created_utc?: number,
+        distinguished?: string,
+        visited?: boolean,
+        num_reports?: string,
+        ups?: number
     }
-
-
 
 }

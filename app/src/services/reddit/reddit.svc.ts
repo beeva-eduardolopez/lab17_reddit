@@ -60,7 +60,31 @@ export default class RedditService extends BaseService {
                     dataChil.score = element.data.score;
                     dataChil.approved_by = element.data.approved_by;
                     dataChil.over_18 = element.data.over_18;
-                    dataChil.hidden = element.data.hidden;
+                    dataChil.hidden = element.data.hidden;         
+                    dataChil.num_comments = element.data.num_comments;
+                    dataChil.thumbnail = element.data.thumbnail;
+                    dataChil.subreddit_id = element.data.subreddit_id;
+                    dataChil.hide_score = element.data.hide_score;
+                    dataChil.link_flair_css_class = element.data.link_flair_css_class;
+                    dataChil.author_flair_css_class = element.data.author_flair_css_class;
+                    dataChil.downs = element.data.downs;
+                    dataChil.saved = element.data.saved;
+                    dataChil.removal_reason = element.data.removal_reason;
+                    dataChil.post_hint = element.data.post_hint;
+                    dataChil.stickied = element.data.stickied;
+                    dataChil.from = element.data.from;
+                    dataChil.is_self = element.data.is_self;
+                    dataChil.from_id = element.data.from_id;
+                    dataChil.permalink = element.data.permalink;
+                    dataChil.locked = element.data.locked;
+                    dataChil.created = element.data.created;
+                    dataChil.author_flair_text = element.data.author_flair_text;
+                    dataChil.quarantine = element.data.quarantine;
+                    dataChil.created_utc = element.data.created_utc;
+                    dataChil.distinguished = element.data.distinguished;
+                    dataChil.visited = element.data.visited;
+                    dataChil.num_reports = element.data.num_reports;
+                    dataChil.ups = element.data.ups;
 
                 }
             });
