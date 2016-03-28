@@ -1,6 +1,7 @@
 import {register} from 'platypus';
 import BaseViewControl from '../base/base.vc';
 import ReditRepository from '../../repositories/reddit/reddit.repo';
+import SingleRedditViewControl from '../singlereddit/singlereddit.vc';
 
 export default class RedditlistViewControl extends BaseViewControl {
     templateString: string = require('./redditlist.vc.html');
@@ -22,6 +23,14 @@ export default class RedditlistViewControl extends BaseViewControl {
         }, (err) => {
             console.log('something went wrong!');
             console.log(err);
+        });
+    }
+    
+    viweDetails(redditId: string): void {
+        this.navigator.navigate(SingleRedditViewControl, {
+            parameters: {
+                redditId: redditId
+            }
         });
     }
 }

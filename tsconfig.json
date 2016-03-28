@@ -27,6 +27,7 @@
         "app/src/services/reddit/reddit.svc.ts",
         "app/src/viewcontrols/base/base.vc.ts",
         "app/src/viewcontrols/home/home.vc.ts",
-        "app/src/viewcontrols/redditlist/redditlist.vc.ts"
+        "app/src/viewcontrols/redditlist/redditlist.vc.ts",
+        "app/src/viewcontrols/singlereddit/singlereddit.vc.ts"
     ]
 }
