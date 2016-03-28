@@ -26,7 +26,7 @@ export default class RedditlistViewControl extends BaseViewControl {
         });
     }
     
-    viweDetails(redditId: string): void {
+    viewDetails(redditId: string): void {
         this.navigator.navigate(SingleRedditViewControl, {
             parameters: {
                 redditId: redditId
