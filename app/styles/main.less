@@ -4,6 +4,13 @@
 @import '../src/viewcontrols/redditlist/redditlist.vc.less';
 @import '../src/viewcontrols/singlereddit/singlereddit.vc.less';
 
+
+@colorRed : #ea4441;
+@colorTitle : #D95B43;
+@colorBackgroud: #27453A;
+@colorYellow: #ECD078;
+@colorLink: #2A8902;
+
 .center{
      justify-content: center; 
      text-align: center;
@@ -11,48 +18,17 @@
      padding-top: 40px; 
 }
 
-.fill {
-  -moz-border-radius: 20px; 
-  -webkit-border-radius: 20px;
-  border-radius: 20px;
-  background:#27453A;
-  border:3px solid #ea4441;
-  color:#ECD078;
-  text-align: center;
-  margin: 0 auto;
-  width: 65%;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border-style: solid;
-
-}
-
-.input-normal {
-  width: 70%;
-  height: 70%;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  color: white;
-  
-}
-
-textarea {
-    color: black;
-    font-size: 15px;
-}
-
 #block {
-    background:#27453A;
-    border:3px solid #ea4441;
-    color:#ECD078;
+    background:@colorBackgroud;
+    border:3px solid @colorRed;
+    color:@colorYellow;
     font-family:Georgia,"Times New Roman",Times,serif;
     margin:20px 0px;
     padding:20px;
 }  
 
 #block h2{
-    border-bottom:1px solid #ea4441;
+    border-bottom:1px solid @colorRed;
     font-size:24px;
     font-weight:normal;
     letter-spacing:-1px;
@@ -70,31 +46,35 @@ nav {
 nav a {
     padding: 0 10px;
     text-decoration: none;
-    color:#ECD078;
+    color:@colorYellow;
     
 }
 
 nav a:hover {
-    background: #ECD078;
+    background: @colorYellow;
 }
 
-.author {
-    color:#D95B43;  
+.title {
+    color:@colorTitle;  
     
 }
 
 span {
-    color:#ECD078;  
+    color:@colorYellow;  
     
+}
+
+.title{
+    color:@colorTitle;  
 }
 
 a {
     padding: 0 10px;
     text-decoration: none;
-    color:#ECD078;
+    color:@colorYellow;
     
 }
 
 a:hover {
-    background: #ECD078;
+    background: @colorLink;
 }

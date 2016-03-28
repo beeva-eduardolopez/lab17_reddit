@@ -1,22 +1,23 @@
-
 <header>
     <div id="block">
         <div style="padding: 10px;">
-            <h2>Reddit DepotUI Platy</h2> by <span class="author">Eduardo Lopez Anta</span></span>
+            <h2>Reddit DepotUI Platy</h2> by <span class="title">Eduardo Lopez Anta</span></span>
         </div>
     </div>
 </header>
 <div class="center">
-    <ul plat-control="plat-foreach" plat-context="reddits" class="reddit-list">
-        <li>
+
+    <div plat-control="plat-foreach" plat-context="reddits" class="reddit-list">
+        <div id="block">
             <div class="reddit" style="padding: 10px;">
-                <div><span class="list-post">Id: </span> {{title}}</div>
-                <div><span class="list-post">Title: </span> {{author}}</div>
-                <div><span class="list-post">Author: </span> {{id}}</div>
-                <div><span class="list-post">Content: </span> {{url}}</div>
+                <div><span class="title">Title: </span> {{title}}</div>
+                <div><span class="title">Author: </span> {{author}}</div>
+                <div><span class="title">Id: </span> {{id}}</div>
+                <div><span class="title">Url: </span><a href="{{url}}">{{url}}</a></div>
                 <br>
                 <plat-button class="button-danger button-small" plat-tap="viewDetails(id)">View Detail</plat-button>
             </div>
-        </li>
-    </ul>
+        </div>
+    </div>
 </div>
+
