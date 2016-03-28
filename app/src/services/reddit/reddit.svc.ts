@@ -11,8 +11,7 @@ export default class RedditService extends BaseService {
             let children: Array<models.IChildren> = success.response.data.children;
             let arrayDataChildren: Array<models.IDataChildren> = new Array();
             children.forEach(element => {
-                
-                
+
                 let dataChil = <models.IDataChildren>{};
 
                 dataChil.title = element.data.title;
@@ -23,6 +22,19 @@ export default class RedditService extends BaseService {
                 arrayDataChildren.push(dataChil);
             });
             return arrayDataChildren;
+        }, (err) => {
+            console.log(err);
+            throw err;
+        });
+    }
+
+
+    getReddit(redditId: string): async.IAjaxThenable<models.IDataChildren> {
+        return this.http.json<models.IDataChildren>({
+            method: 'GET',
+            url: this.host + '/posts/' + redditId
+        }).then((success) => {
+            return success.response;
         }, (err) => {
             console.log(err);
             throw err;

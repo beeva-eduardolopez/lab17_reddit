@@ -1,7 +1,7 @@
 import {App, events, register, routing, web} from 'platypus';
 import HomeViewControl from '../viewcontrols/home/home.vc';
 import RedditListViewControl from '../viewcontrols/redditlist/redditlist.vc';
-// import SinglePostViewControl from '../viewcontrols/singlepost/singlepost.vc';
+import SingleRedditViewControl from '../viewcontrols/singlereddit/singlereddit.vc';
 
 export default class MyApp extends App {
     constructor(router: routing.Router, config: web.IBrowserConfig) {
@@ -11,8 +11,8 @@ export default class MyApp extends App {
 
           router.configure([
             { pattern: '', view: RedditListViewControl },
-            { pattern: 'redditlist', view: RedditListViewControl }
-            // { pattern: 'posts/:someid', view: SinglePostViewControl }
+            { pattern: 'redditlist', view: RedditListViewControl },
+            { pattern: 'reddit/:redditId', view: SingleRedditViewControl }
         ]);
     }
 
