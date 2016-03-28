@@ -8,7 +8,7 @@ export default class RedditRepository extends BaseRepository {
         super();
     }
 
-    getListReddit(): async.IThenable<Array<models.IRedditPost>> {
+    getListReddit(): async.IThenable <Array<models.IDataChildren>> {
         return this.redditSvc.getListReddit();
     }
 

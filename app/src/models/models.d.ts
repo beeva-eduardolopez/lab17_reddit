@@ -7,11 +7,11 @@ declare module models {
     }
 
     interface IData {
-        children: IChildren;
+        children: Array<IChildren>;
     }
 
     interface IChildren {
-        dataChildren: IDataChildren;
+        data: IDataChildren;
 
     }
     
