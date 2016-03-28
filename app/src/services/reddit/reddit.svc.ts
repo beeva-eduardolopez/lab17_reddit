@@ -30,11 +30,22 @@ export default class RedditService extends BaseService {
 
 
     getReddit(redditId: string): async.IAjaxThenable<models.IDataChildren> {
-        return this.http.json<models.IDataChildren>({
+        return this.http.json<models.IRedditPost>({
             method: 'GET',
-            url: this.host + '/posts/' + redditId
+            url: this.host + '/all.json'
         }).then((success) => {
-            return success.response;
+            let children: Array<models.IChildren> = success.response.data.children;
+            let dataChil = <models.IDataChildren>{};
+            children.forEach(element => {
+                if (element.data.id === redditId) {
+                    dataChil.title = element.data.title;
+                    dataChil.author = element.data.author;
+                    dataChil.id = element.data.id;
+                    dataChil.url = element.data.url;
+
+                }
+            });
+            return dataChil;
         }, (err) => {
             console.log(err);
             throw err;

@@ -11,6 +11,10 @@ export default class RedditRepository extends BaseRepository {
     getListReddit(): async.IThenable <Array<models.IDataChildren>> {
         return this.redditSvc.getListReddit();
     }
+    
+   getReddit(redditId: string): async.IAjaxThenable<models.IDataChildren> {
+       return this.redditSvc.getReddit(redditId);
+   }
 
 }
 
